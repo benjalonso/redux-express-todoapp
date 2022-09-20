@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Amatic SC', cursive;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+
+}
+
+.title {
+    font-size: 5rem;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.cajaTodo {
+    margin: auto;
+    margin-top: 200px;
+    min-width: 300px;
+    max-width: 30rem;
+    height: 10rem;
+    background: rgb(216, 211, 211);
+    box-shadow: 2px 2px 5px rgb(46, 45, 45);
+    border-radius: 0.4em;
+
+
+}
+
+/* Diseño addButton */
+.addFormButton {
+    position: relative;
+    padding: 8px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #4283c0;
+    border: none;
+    border-bottom: 5px solid #0f6bc2;
+    text-shadow: 0px -2px #0f6bc2;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+   }
+   
+   .addFormButton:hover, .addFormButton:active {
+    -webkit-transform: translate(0px,5px);
+    -ms-transform: translate(0px,5px);
+    transform: translate(0px,5px);
+    border-bottom: 1px solid #2ecc71;
+   }
+
+
+/* Diseño cardTodos */
+.cardTodos {
+    margin: 1em auto 2em;
+    width: 400px;
+    height: 250px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+}
+.cardTodos:hover {
+    border: #006fff 0.2em solid;
+}
+.cartTodosBGRed {
+    background: #EF8677;
+}
+.cartTodosBGBlue {
+    background: #82B6D9;
+}
+.cartTodosBGYellow {
+    background: #FFE89E;
+}
+
+/* Diseño cardTodos */

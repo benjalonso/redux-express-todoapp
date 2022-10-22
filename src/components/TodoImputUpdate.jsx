@@ -19,16 +19,15 @@ const TodoInputUpdate = () => {
 
 	const handleChange = (e) => {
 		setUpdateTodo({
-			[e.target.name]: e.target.value,
+			...updatetodo, [e.target.name]: e.target.value,
 		});
 	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		await updatePost({ ...todo, id: id }).unwrap();
+		console.log(updatetodo)
+		await updatePost({ ...updatetodo, id: id }).unwrap();
 		navigate("/");
-
-
 	};
 
 	let content;
@@ -40,7 +39,6 @@ const TodoInputUpdate = () => {
 		</div>
 	} else if (isSuccess) {
 		content = (
-
 			<form onSubmit={handleSubmit} className="container cajaTodo">
 				<input
 					name="title"

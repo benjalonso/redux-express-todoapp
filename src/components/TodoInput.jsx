@@ -46,6 +46,7 @@ const TodoInput = () => {
                 onChange={handleChange}
                 className="form-control"
                 id="floatingTitle"
+                placeholder={'Type here'}
               />
               <label htmlFor="floatingTitle">What are you working on?</label>
             </div>
@@ -57,6 +58,7 @@ const TodoInput = () => {
                 onChange={handleChange}
                 className="form-control"
                 id="floatingDescription"
+                placeholder='type here'
               />
               <label htmlFor="floatingDescription">Describe the task</label>
             </div>

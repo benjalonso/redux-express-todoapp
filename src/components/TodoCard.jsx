@@ -32,6 +32,9 @@ const TodoCard = () => {
     return diff / (1000 * 60 * 60 * 24);
   };
 
+  console.log(todos.sort((a, b) => new Date(a[a].expiration).getTime() > new Date(b[a].expiration).getTime()));
+
+
   let finalDesign = "cardTodos";
 
   const handleBackgroundCardColor = (created, expiration) => {
@@ -46,7 +49,7 @@ const TodoCard = () => {
       return (finalDesign = "cardTodos cartTodosBGRed");
     }
   };
-
+  
   let content;
   if (isLoading) {
     content = (
@@ -62,15 +65,15 @@ const TodoCard = () => {
       return (
         <div className={finalDesign} key={todo.id}>
           <div>
-            <h1 className="card-title ">{todo.title}</h1>
-            <h4>
+            <h2 className="card-title ">{todo.title}</h2>
+            <h5>  
               Start {todo.created}
               <MdDateRange />
-            </h4>
-            <h4>
+            </h5>
+            <h5>
               Finish {todo.expiration}
               <MdDateRange />
-            </h4>
+            </h5>
             <h3 className="card-text ">{todo.description}</h3>
             <Link to={`/edit-task/${todo.id}`}>
               <FaPencilAlt className="text-dark" />
@@ -98,6 +101,7 @@ const TodoCard = () => {
               <HiPlusCircle className="fs-1" />
             </button>
           </Link>
+
         </h1>
       </div>
       {content}

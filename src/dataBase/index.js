@@ -1,14 +1,15 @@
 const app = require("./expressConfig.js");
 const sequelize = require("./database/database");
+const PORT = require('../config.js')
 
 async function main() {
     try {
         await sequelize.sync({force: false});
-        app.listen(3300, () => {
-            console.log("Server is running on port 3300 bro");
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
         });
     } catch (error) {
-        console.log("Unable to connect bro", error);
+        console.log("Unable to connect", error);
 
     }
 }

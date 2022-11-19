@@ -32,7 +32,7 @@ const TodoCard = () => {
     return diff / (1000 * 60 * 60 * 24);
   };
 
-  console.log(todos.sort((a, b) => new Date(a[a].expiration).getTime() > new Date(b[a].expiration).getTime()));
+  // console.log(todos.sort((a, b) => new Date(a[a].expiration).getTime() > new Date(b[a].expiration).getTime()));
 
 
   let finalDesign = "cardTodos";
